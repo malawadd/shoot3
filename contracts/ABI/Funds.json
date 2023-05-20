@@ -1,0 +1,195 @@
+[
+  {
+    "inputs": [],
+    "stateMutability": "nonpayable",
+    "type": "constructor"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "id",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "string",
+        "name": "fundId",
+        "type": "string"
+      },
+      {
+        "indexed": false,
+        "internalType": "string",
+        "name": "fundName",
+        "type": "string"
+      },
+      {
+        "indexed": false,
+        "internalType": "string",
+        "name": "fundDescription",
+        "type": "string"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "fundContributors",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "fundPrice",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "fundGoal",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "fundAmountRaised",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "fundFee",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "uploader",
+        "type": "address"
+      }
+    ],
+    "name": "FundCreated",
+    "type": "event"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "string",
+        "name": "_fundId",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "_fundName",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "_fundDescription",
+        "type": "string"
+      },
+      {
+        "internalType": "uint256",
+        "name": "_fundPrice",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "_fundGoal",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "_fundFee",
+        "type": "uint256"
+      }
+    ],
+    "name": "createFund",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "fetchFund",
+    "outputs": [
+      {
+        "components": [
+          {
+            "internalType": "uint256",
+            "name": "id",
+            "type": "uint256"
+          },
+          {
+            "internalType": "string",
+            "name": "fundId",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "fundName",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "fundDescription",
+            "type": "string"
+          },
+          {
+            "internalType": "uint256",
+            "name": "fundContributors",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "fundPrice",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "fundGoal",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "fundAmountRaised",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "fundFee",
+            "type": "uint256"
+          },
+          {
+            "internalType": "address payable",
+            "name": "uploader",
+            "type": "address"
+          }
+        ],
+        "internalType": "struct Funds.Fund[]",
+        "name": "",
+        "type": "tuple[]"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "string",
+        "name": "_fundId",
+        "type": "string"
+      },
+      {
+        "internalType": "uint256",
+        "name": "_id",
+        "type": "uint256"
+      }
+    ],
+    "name": "fundFund",
+    "outputs": [],
+    "stateMutability": "payable",
+    "type": "function"
+  }
+]

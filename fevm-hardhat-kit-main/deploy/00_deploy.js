@@ -47,4 +47,10 @@ module.exports = async ({ deployments }) => {
         args: ["0x0B9737ab4B3e5303CB67dB031b509697e31c02d3"],
         log: true,
     });
+
+    const Funds = await deploy("Funds", {
+        from: wallet.address,
+        args: [],
+        log: true,
+    });
 }

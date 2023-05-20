@@ -44,6 +44,26 @@ function Navbar() {
           </Flex>
         </Link>
 
+         {router.asPath === "/" || router.asPath === "/membership" ? null : (
+            <Flex alignItems={"center"}>
+              
+              <Link href="/funds" _hover={{ textDecoration: "none" }}>
+                <Text
+                  fontSize={"1.125rem"}
+                  color={"#0a0a0a"}
+                  lineHeight={"1.625rem"}
+                  mx={"1em"}
+                  transition="color 0.2s ease"
+                  _hover={{ color: "gray", transition: "color 0.2s ease" }}
+                  fontWeight={router.asPath === "/funds" ? 600 : 400}
+                >
+                  funds
+                </Text>
+              </Link>
+              
+            </Flex>
+          )}
+
 
         {router.asPath === "/" ? null : <ConnectButton />}
       </Flex>
