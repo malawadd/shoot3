@@ -13,8 +13,8 @@ export const filecoinHyperspace = {
     symbol: 'tFIL',
   },
   rpcUrls: {
-    public: { http: ['https://filecoin-hyperspace.chainup.net/rpc/v1'] },
-    default: { http: ['https://filecoin-hyperspace.chainup.net/rpc/v1'] },
+    public: { http: ['https://rpc.ankr.com/filecoin_testnet'] },
+    default: { http: ['https://rpc.ankr.com/filecoin_testnet'] },
   },
   blockExplorers: {
     etherscan: { name: 'SnowTrace', url: 'ttps://hyperspace.filfox.info/en' },
