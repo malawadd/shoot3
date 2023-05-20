@@ -1,10 +1,92 @@
-import { Heading, Container, Text, Flex, Link, Code } from "@chakra-ui/react";
-import React from "react";
+import {
+  Heading,
+  Container,
+  Flex,
+  Box,
+  useToast,
+  Spinner,
+  Button,
+} from "@chakra-ui/react";
+import { ConnectButton } from "@rainbow-me/rainbowkit";
+import React, { useEffect, useState } from "react";
+import { useAccount } from "wagmi";
+import { useLoadingContext } from "../../context/loading";
+import { useRouter } from "next/router";
+
 
 function Hero() {
+  const { isConnected, isDisconnected } = useAccount();
+  const toast = useToast();
+  const { setLoading } = useLoadingContext();
+  const router = useRouter();
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    document.addEventListener("mousemove", parallax);
+    console.log(isConnected);
+  }, []);
+
+  useEffect(() => {
+    router.prefetch("/membership");
+    setTimeout(() => {
+      setLoading(false);
+    }, 1500);
+    console.log(isConnected);
+  }, []);
+
+  
+
+  useEffect(() => {
+    if (isConnected) {
+      setTimeout(() => {
+        toast({
+          title: "Loading...",
+          status: "info",
+          variant: "subtle",
+          position: "top",
+          duration: 2800,
+          icon: <Spinner />,
+        });
+        setTimeout(() => {
+          toast({
+            title: "Signed In",
+            status: "success",
+            variant: "subtle",
+            position: "top",
+            duration: 3500,
+          });
+        }, 3000);
+ 
+      }, 1700);
+    }
+    if (isDisconnected) {
+      setVisible(false);
+      setTimeout(() => {
+        setLoading(false);
+      }, 1500);
+    }
+  }, [isConnected, isDisconnected]);
+
+  useEffect(() => {
+    setTimeout(() => {
+      isConnected && setVisible(true);
+    }, 500);
+  }, [isConnected]);
+
+  function parallax(e) {
+    document.querySelectorAll(".px-move").forEach(function (move) {
+      let moving_value = move.getAttribute("data-value");
+      let x = (e.clientX * moving_value) / 100;
+      let y = (e.clientY * moving_value) / 100;
+      move.style.transform = "translateX(" + x + "px) translateY(" + y + "px)";
+    });
+  }
+
   return (
     <>
-      <Container maxW={"1100px"} h={"39vh"} px={"2rem"}>
+      <Container maxW={"1400px"} h={"83vh"} px={"2rem"}>
+        {/* <Stripes /> */}
+
         <Flex
           flexDirection={"column"}
           alignItems={"center"}
@@ -12,38 +94,41 @@ function Hero() {
           h={"100%"}
           w={"100%"}
           py={"4rem"}
+          data-value="1"
+          className="px-move"
         >
           <Flex justifyContent={"center"} alignItems={"center"}>
             <Heading
-              className={"h-shadow-black"}
+              className={"h-shadow-black hero-center-text "}
               fontWeight={"700"}
+              fontFamily={"Ubuntu"}
               fontSize={["1.4rem", "1rem", "2.5rem", "3rem", "4rem"]}
             >
-              Welcome to&nbsp;
+              Unleash Sporting Success with Our Curated Data: Your Competitive Advantage
             </Heading>
-            <Link
-              className={"h-shadow-blue"}
-              color={"#0070f3"}
-              isExternal
-              href="https://github.com/lakshh07/Web3-Starter-Kit"
-            >
-              <Heading
-                fontWeight={"700"}
-                fontSize={["1.4rem", "1rem", "2.5rem", "3rem", "4rem"]}
-              >
-                Web3 Starter Kit!
-              </Heading>
-            </Link>
           </Flex>
 
-          <Text
-            textAlign={"center"}
-            mt={"4rem"}
-            fontSize={["1rem", "1rem", "1.2rem", "1.4rem", "1.6rem"]}
-          >
-            Get started by editing{" "}
-            <Code fontSize={"1.5rem"}>pages/index.js</Code>
-          </Text>
+          <Box mt={"3em"} align={"center"}>
+            <ConnectButton label="Sign In" />
+
+            <Button
+              borderWidth={"2px"}
+              borderColor={"rgb(10 10 10/1)"}
+              borderRadius={"0.625rem"}
+              bg={"rgb(10 10 10/1)"}
+              py={"0.375rem"}
+              px={"1rem"}
+              colorScheme={"black"}
+              mt={"2em"}
+              display={visible ? "block" : "none"}
+              onClick={() => {
+                setLoading(true);
+                router.push("/membership");
+              }}
+            >
+              Gets Started
+            </Button>
+          </Box>
         </Flex>
       </Container>
     </>
