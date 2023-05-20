@@ -14,31 +14,37 @@ module.exports = async ({ deployments }) => {
     const tokensToBeMinted = networkConfig[chainId]["tokensToBeMinted"]
 
     
-    //deploy Simplecoin
-    const simpleCoin = await deploy("SimpleCoin", {
-        from: wallet.address,
-        args: [tokensToBeMinted],
-        log: true,
-    });
+    // //deploy Simplecoin
+    // const simpleCoin = await deploy("SimpleCoin", {
+    //     from: wallet.address,
+    //     args: [tokensToBeMinted],
+    //     log: true,
+    // });
 
-    //deploy FilecoinMarketConsumer
-    const filecoinMarketConsumer = await deploy("FilecoinMarketConsumer", {
-        from: wallet.address,
-        args: [],
-        log: true,
-    });
+    // //deploy FilecoinMarketConsumer
+    // const filecoinMarketConsumer = await deploy("FilecoinMarketConsumer", {
+    //     from: wallet.address,
+    //     args: [],
+    //     log: true,
+    // });
 
-    //deploy DealRewarder
-    const dealRewarder = await deploy("DealRewarder", {
-        from: wallet.address,
-        args: [],
-        log: true,
-    });
+    // //deploy DealRewarder
+    // const dealRewarder = await deploy("DealRewarder", {
+    //     from: wallet.address,
+    //     args: [],
+    //     log: true,
+    // });
     
-    //deploy DealClient
-    const dealClient = await deploy("DealClient", {
+    // //deploy DealClient
+    // const dealClient = await deploy("DealClient", {
+    //     from: wallet.address,
+    //     args: [],
+    //     log: true,
+    // });
+
+    const Shoot3membership = await deploy("Shoot3membership", {
         from: wallet.address,
-        args: [],
+        args: ["0x0B9737ab4B3e5303CB67dB031b509697e31c02d3"],
         log: true,
     });
 }
