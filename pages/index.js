@@ -12,7 +12,7 @@ export default function Home() {
   useEffect(() => {
     toast({
       title: "Connect Wallet",
-      description: "connect to Polygon Mumbai for testing",
+      description: "connect to hyperspace for testing",
       status: "info",
       duration: 4000,
       isClosable: false,

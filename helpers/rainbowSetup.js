@@ -1,27 +1,48 @@
-import { chain, createClient, configureChains } from "wagmi";
+import { createClient, configureChains } from "wagmi";
 import { getDefaultWallets } from "@rainbow-me/rainbowkit";
-import { alchemyProvider } from "wagmi/providers/alchemy";
 import { publicProvider } from "wagmi/providers/public";
+
+
+export const filecoinHyperspace = {
+  id: 3141,
+  name: 'Hyperspace ',
+  network: 'Hyperspace ',
+  nativeCurrency: {
+    decimals: 18,
+    name: 'tFIL',
+    symbol: 'tFIL',
+  },
+  rpcUrls: {
+    public: { http: ['https://filecoin-hyperspace.chainup.net/rpc/v1'] },
+    default: { http: ['https://filecoin-hyperspace.chainup.net/rpc/v1'] },
+  },
+  blockExplorers: {
+    etherscan: { name: 'SnowTrace', url: 'ttps://hyperspace.filfox.info/en' },
+    default: { name: 'SnowTrace', url: 'ttps://hyperspace.filfox.info/en' },
+  },
+  
+}
 
 export const { chains, provider } = configureChains(
   [
-    chain.polygonMumbai,
-    chain.mainnet,
-    chain.rinkeby,
-    chain.optimism,
-    chain.arbitrum,
-    chain.polygon,
-    chain.localhost,
-    chain.hardhat,
+    // chain.mainnet,
+    //  ,
+    filecoinHyperspace,
+
+    // chain.optimism,
+    // chain.arbitrum,
+    // chain.polygon,
+    // chain.localhost,
+    // chain.hardhat,
   ],
-  [alchemyProvider({ alchemyId: process.env.ALCHEMY_ID }), publicProvider()]
+  [ publicProvider()]
 );
 const { connectors } = getDefaultWallets({
   appName: "Web3 Starter Kit",
   chains,
 });
 export const wagmiClient = createClient({
-  // autoConnect: true,
+  autoConnect: true,
   connectors,
   provider,
 });
