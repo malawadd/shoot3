@@ -5,7 +5,7 @@ import { useLoadingContext } from "../../../context/loading";
 import Backward from "./Backward";
 import ReactMarkdown from "react-markdown";
 
-import datasetContractAbi from "../../../contracts/ABI/DatasetContract.json";
+import datasetContractAbi from "../../../contracts/ABI/datasetContract.json";
 import { getDatasetContract } from "../../../utils/datasetContract";
 import { useRouter } from "next/router";
 import { useProvider } from "wagmi";

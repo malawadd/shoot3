@@ -18,7 +18,7 @@ import { newUploadMarkdownData } from "../../../utils/ipfs";
 import { useSigner, useProvider, useContractRead } from "wagmi";
 import { getDatasetContract } from "../../../utils/datasetContract";
 import { useRouter } from "next/router";
-import datasetContractAbi from "../../../contracts/ABI/DatasetContract.json";
+import datasetContractAbi from "../../../contracts/ABI/datasetContract.json";
 function NewRequest() {
   const { setLoading } = useLoadingContext();
   const [moduleDetails, setModuleDetails] = useState({
