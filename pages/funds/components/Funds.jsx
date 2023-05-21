@@ -330,7 +330,7 @@ function Courses() {
                                     list.fundAmountRaised.toString()
                                   )}
                                 </Text>
-                                <Image w="75px" src={"/assets/matic.svg"} />
+                                <Image w="20px" src={"/assets/FIL.svg"} />
                               </Flex>
                             </Box>
                             <Box>
@@ -347,7 +347,7 @@ function Courses() {
                                     list.fundGoal.toString()
                                   )}
                                 </Text>
-                                <Image w="80px" src={"/assets/matic.svg"} />
+                                <Image w="20px" src={"/assets/FIL.svg"} />
                               </Flex>
                             </Box>
                           </Flex>
@@ -408,7 +408,7 @@ function Courses() {
             </>
           ) : (
             <>
-              <Flex
+              {/* <Flex
                 my="10rem"
                 justifyContent="center"
                 flexDir="column"
@@ -422,7 +422,644 @@ function Courses() {
                 <Heading fontSize="1.5em" fontWeight={500} pt="1em">
                   No Funds Found
                 </Heading>
-              </Flex>
+              </Flex> */}
+
+            <Grid
+                mt={"1.5rem"}
+                templateColumns={"repeat(3, minmax(0px, 1fr))"}
+                gap={"2rem"}
+              >
+
+                <GridItem  key={1}>
+                      <Box
+                        borderWidth={"2px"}
+                        borderColor={"rgb(10 10 10/1)"}
+                        borderRadius={"0.625rem"}
+                        overflow={"hidden"}
+                        cursor={"pointer"}
+                        transform={"scale(1)"}
+                        transition={"transform 0.2s cubic-bezier(0.4, 0, 1, 1)"}
+                        _hover={{
+                          backgroundColor: "rgb(248,248,248)",
+                          transform: "scale(1.02)",
+                          transition:
+                            "transform 0.2s cubic-bezier(0.4, 0, 1, 1)",
+                        }}
+                      >
+                        <Box
+                          h={"100px"}
+                          overflow={"hidden"}
+                          borderBottomWidth={"2px"}
+                        >
+                          <Image
+                            alt={"" }
+                            objectFit={"cover"}
+                            src={"/assets/var2.png"}
+                            h={"100%"}
+                            w={"100%"}
+                          />
+                        </Box>
+
+                        <Box py={"1.2rem"} px={"1.5rem"}>
+                          <Tag
+                            borderWidth={"2px"}
+                            borderColor={"rgb(10 10 10/1)"}
+                            borderRadius={"9999px"}
+                            textTransform={"uppercase"}
+                            fontWeight={600}
+                            fontSize={"0.75rem"}
+                            lineHeight={"1rem"}
+                            py={"0.25rem"}
+                            px={"0.75rem"}
+                            bg={"rgb(183 234 213)"}
+                          >
+                            fund
+                          </Tag>
+                          <Heading
+                            mt={"1rem"}
+                            fontSize={"1.5rem"}
+                            lineHeight={"2rem"}
+                            color={"#1a202c"}
+                          >
+                            {"25k+ Matches Football European Database" }
+                          </Heading>
+                          <Text
+                            fontSize={"0.875rem"}
+                            lineHeight={"1.25rem"}
+                            color={"#888888"}
+                            mt={"0.5rem"}
+                            mb={"1em"}
+                          >
+                            {"Players and Teams' attributes* sourced from EA Sports' FIFA video game series,\
+                             including the weekly updates - - Team line up with squad formation (X, Y coordinates), Seasons 2008 to 2016 "}
+                          </Text>
+
+                          <Flex
+                            bg={"#EDF2F6"}
+                            fontSize={"14px"}
+                            lineHeight={"17px"}
+                            w={"max-content"}
+                            borderRadius={"0.375rem"}
+                            px={"0.5rem"}
+                            py={"0.25rem"}
+                            alignItems={"center"}
+                            mb={"1em"}
+                          >
+                            <Flex
+                              alignItems={"center"}
+                              px={"0.5rem"}
+                              py={"0.25rem"}
+                              bg={"#E4E7EB"}
+                              borderRadius={"0.375rem"}
+                              mr={"10px"}
+                            >
+                              <GrMoney fontSize={"12px"} />
+                              <Text ml={"8px"} fontWeight={500}>
+                                Price
+                              </Text>
+                            </Flex>
+                            <Text fontWeight={600} textTransform={"capitalize"}>
+                              {"10"}{" "}
+                              FIL
+                            </Text>
+                          </Flex>
+
+                          <Flex
+                            borderWidth={"2px"}
+                            borderColor={"rgb(10 10 10/1)"}
+                            alignItems={"center"}
+                            borderRadius={"0.3125rem"}
+                            bg={"rgb(198 201 246)"}
+                            py={"0.25rem"}
+                            px={"0.75rem"}
+                            w={"max-content"}
+                            mt={"1.2rem"}
+                          >
+                            <Box
+                              borderRadius={"50%"}
+                              borderWidth={"1.5px"}
+                              borderColor={"rgb(10 10 10/1)"}
+                              overflow={"hidden"}
+                            >
+                              <Blockies
+                                seed={"0X123456789"}
+                                color="#dfe"
+                                bgcolor="#aaa"
+                                default="-1"
+                                size={10}
+                                scale={2}
+                              />
+                            </Box>
+                            <Text
+                              ml={"10px"}
+                              fontSize={"0.75rem"}
+                              lineHeight={"1rem"}
+                              fontWeight={600}
+                            >
+                              0x1b7e08....75dB632
+                              
+                            </Text>
+                          </Flex>
+
+                          <Progress
+                            my={"1.7rem"}
+                            size="xs"
+                            hasStripe
+                            value={
+                             "50"
+                            }
+                            borderRadius={"20px"}
+                            colorScheme={"purple"}
+                          />
+
+                          <Flex
+                            alignItems={"center"}
+                            justifyContent={"space-around"}
+                            py={"0.5rem"}
+                          >
+                            <Box>
+                              <Text fontSize={"15px"} fontWeight={600}>
+                                Fund Raised
+                              </Text>
+                              <Flex mt={"5px"} alignItems={"center"}>
+                                <Text
+                                  fontWeight={500}
+                                  mr={"5px"}
+                                  fontSize={"17px"}
+                                >
+                                  300
+                                </Text>
+                                <Image w="20px" src={"/assets/FIL.svg"} />
+                              </Flex>
+                            </Box>
+                            <Box>
+                              <Text fontSize={"15px"} fontWeight={600}>
+                                Fund Goal
+                              </Text>
+                              <Flex mt={"5px"} alignItems={"center"}>
+                                <Text
+                                  fontWeight={500}
+                                  mr={"5px"}
+                                  fontSize={"17px"}
+                                >
+                                 600
+                                </Text>
+                                <Image w="20px" src={"/assets/FIL.svg"} />
+                              </Flex>
+                            </Box>
+                          </Flex>
+                        </Box>
+
+                        <Box>
+                          <Flex
+                            justifyContent={"space-between"}
+                            alignItems={"center"}
+                            borderColor={"rgb(10 10 10/1)"}
+                            borderTopWidth={"2px"}
+                            py={"1rem"}
+                            px={"2rem"}
+                            bg={"rgb(250 229 195)"}
+                            onClick={() =>
+                                 fund(
+                                  "10",
+                                  "5",
+                                 " 1"
+                                  )
+                            }
+                            
+                            
+                          >
+                            <Flex alignItems={"center"}>
+                              {" "}
+                              <HiOutlineCash />
+                              <Text ml={"5px"} fontWeight={600}>
+                                {"FUND"}
+                              </Text>
+                            </Flex>
+
+                            <FiArrowUpRight fontSize={"20px"} />
+                          </Flex>
+                        </Box>
+                      </Box>
+                      
+                    </GridItem>
+                
+                    <GridItem  key={2}>
+                      <Box
+                        borderWidth={"2px"}
+                        borderColor={"rgb(10 10 10/1)"}
+                        borderRadius={"0.625rem"}
+                        overflow={"hidden"}
+                        cursor={"pointer"}
+                        transform={"scale(1)"}
+                        transition={"transform 0.2s cubic-bezier(0.4, 0, 1, 1)"}
+                        _hover={{
+                          backgroundColor: "rgb(248,248,248)",
+                          transform: "scale(1.02)",
+                          transition:
+                            "transform 0.2s cubic-bezier(0.4, 0, 1, 1)",
+                        }}
+                      >
+                        <Box
+                          h={"100px"}
+                          overflow={"hidden"}
+                          borderBottomWidth={"2px"}
+                        >
+                          <Image
+                            alt={"" }
+                            objectFit={"cover"}
+                            src={"/assets/var1.png"}
+                            h={"100%"}
+                            w={"100%"}
+                          />
+                        </Box>
+
+                        <Box py={"1.2rem"} px={"1.5rem"}>
+                          <Tag
+                            borderWidth={"2px"}
+                            borderColor={"rgb(10 10 10/1)"}
+                            borderRadius={"9999px"}
+                            textTransform={"uppercase"}
+                            fontWeight={600}
+                            fontSize={"0.75rem"}
+                            lineHeight={"1rem"}
+                            py={"0.25rem"}
+                            px={"0.75rem"}
+                            bg={"rgb(183 234 213)"}
+                          >
+                            fund
+                          </Tag>
+                          <Heading
+                            mt={"1rem"}
+                            fontSize={"1.5rem"}
+                            lineHeight={"2rem"}
+                            color={"#1a202c"}
+                          >
+                            {"Nottingham Forest VIP Tactical Camera" }
+                          </Heading>
+                          <Text
+                            fontSize={"0.875rem"}
+                            lineHeight={"1.25rem"}
+                            color={"#888888"}
+                            mt={"0.5rem"}
+                            mb={"1em"}
+                          >
+                            {"Includes Tactical camera for all Nottingham Forest matches season 22/23 "}
+                          </Text>
+
+                          <Flex
+                            bg={"#EDF2F6"}
+                            fontSize={"14px"}
+                            lineHeight={"17px"}
+                            w={"max-content"}
+                            borderRadius={"0.375rem"}
+                            px={"0.5rem"}
+                            py={"0.25rem"}
+                            alignItems={"center"}
+                            mb={"1em"}
+                          >
+                            <Flex
+                              alignItems={"center"}
+                              px={"0.5rem"}
+                              py={"0.25rem"}
+                              bg={"#E4E7EB"}
+                              borderRadius={"0.375rem"}
+                              mr={"10px"}
+                            >
+                              <GrMoney fontSize={"12px"} />
+                              <Text ml={"8px"} fontWeight={500}>
+                                Price
+                              </Text>
+                            </Flex>
+                            <Text fontWeight={600} textTransform={"capitalize"}>
+                              {"50"}{" "}
+                              FIL
+                            </Text>
+                          </Flex>
+
+                          <Flex
+                            borderWidth={"2px"}
+                            borderColor={"rgb(10 10 10/1)"}
+                            alignItems={"center"}
+                            borderRadius={"0.3125rem"}
+                            bg={"rgb(198 201 246)"}
+                            py={"0.25rem"}
+                            px={"0.75rem"}
+                            w={"max-content"}
+                            mt={"1.2rem"}
+                          >
+                            <Box
+                              borderRadius={"50%"}
+                              borderWidth={"1.5px"}
+                              borderColor={"rgb(10 10 10/1)"}
+                              overflow={"hidden"}
+                            >
+                              <Blockies
+                                seed={"0X123456"}
+                                color="#dfe"
+                                bgcolor="#aaa"
+                                default="-1"
+                                size={10}
+                                scale={2}
+                              />
+                            </Box>
+                            <Text
+                              ml={"10px"}
+                              fontSize={"0.75rem"}
+                              lineHeight={"1rem"}
+                              fontWeight={600}
+                            >
+                              0x7efd51....yto128r
+                              
+                            </Text>
+                          </Flex>
+
+                          <Progress
+                            my={"1.7rem"}
+                            size="xs"
+                            hasStripe
+                            value={
+                             "100"
+                            }
+                            borderRadius={"20px"}
+                            colorScheme={"purple"}
+                          />
+
+                          <Flex
+                            alignItems={"center"}
+                            justifyContent={"space-around"}
+                            py={"0.5rem"}
+                          >
+                            <Box>
+                              <Text fontSize={"15px"} fontWeight={600}>
+                                Fund Raised
+                              </Text>
+                              <Flex mt={"5px"} alignItems={"center"}>
+                                <Text
+                                  fontWeight={500}
+                                  mr={"5px"}
+                                  fontSize={"17px"}
+                                >
+                                  7500
+                                </Text>
+                                <Image w="20px" src={"/assets/FIL.svg"} />
+                              </Flex>
+                            </Box>
+                            <Box>
+                              <Text fontSize={"15px"} fontWeight={600}>
+                                Fund Goal
+                              </Text>
+                              <Flex mt={"5px"} alignItems={"center"}>
+                                <Text
+                                  fontWeight={500}
+                                  mr={"5px"}
+                                  fontSize={"17px"}
+                                >
+                                 7500
+                                </Text>
+                                <Image w="20px" src={"/assets/FIL.svg"} />
+                              </Flex>
+                            </Box>
+                          </Flex>
+                        </Box>
+
+                        <Box>
+                          <Flex
+                            justifyContent={"space-between"}
+                            alignItems={"center"}
+                            borderColor={"rgb(10 10 10/1)"}
+                            borderTopWidth={"2px"}
+                            py={"1rem"}
+                            px={"2rem"}
+                            bg={"rgb(183 234 213)"}
+                            
+                            
+                          >
+                            <Flex alignItems={"center"}>
+                              {" "}
+                              <HiOutlineCash />
+                              <Text ml={"5px"} fontWeight={600}>
+                                {"FUNDED"}
+                              </Text>
+                            </Flex>
+
+                            {/* <FiArrowUpRight fontSize={"20px"} /> */}
+                          </Flex>
+                        </Box>
+                      </Box>
+                      
+                    </GridItem>
+                    
+                    <GridItem  key={2}>
+                      <Box
+                        borderWidth={"2px"}
+                        borderColor={"rgb(10 10 10/1)"}
+                        borderRadius={"0.625rem"}
+                        overflow={"hidden"}
+                        cursor={"pointer"}
+                        transform={"scale(1)"}
+                        transition={"transform 0.2s cubic-bezier(0.4, 0, 1, 1)"}
+                        _hover={{
+                          backgroundColor: "rgb(248,248,248)",
+                          transform: "scale(1.02)",
+                          transition:
+                            "transform 0.2s cubic-bezier(0.4, 0, 1, 1)",
+                        }}
+                      >
+                        <Box
+                          h={"100px"}
+                          overflow={"hidden"}
+                          borderBottomWidth={"2px"}
+                        >
+                          <Image
+                            alt={"" }
+                            objectFit={"cover"}
+                            src={"/assets/var3.png"}
+                            h={"100%"}
+                            w={"100%"}
+                          />
+                        </Box>
+
+                        <Box py={"1.2rem"} px={"1.5rem"}>
+                          <Tag
+                            borderWidth={"2px"}
+                            borderColor={"rgb(10 10 10/1)"}
+                            borderRadius={"9999px"}
+                            textTransform={"uppercase"}
+                            fontWeight={600}
+                            fontSize={"0.75rem"}
+                            lineHeight={"1rem"}
+                            py={"0.25rem"}
+                            px={"0.75rem"}
+                            bg={"rgb(183 234 213)"}
+                          >
+                            fund
+                          </Tag>
+                          <Heading
+                            mt={"1rem"}
+                            fontSize={"1.5rem"}
+                            lineHeight={"2rem"}
+                            color={"#1a202c"}
+                          >
+                            {"Football Data from Transfermarkt" }
+                          </Heading>
+                          <Text
+                            fontSize={"0.875rem"}
+                            lineHeight={"1.25rem"}
+                            color={"#888888"}
+                            mt={"0.5rem"}
+                            mb={"1em"}
+                          >
+                            {"Clean, structured and automatically updated football (soccer) data from Transfermarkt"}
+                          </Text>
+
+                          <Flex
+                            bg={"#EDF2F6"}
+                            fontSize={"14px"}
+                            lineHeight={"17px"}
+                            w={"max-content"}
+                            borderRadius={"0.375rem"}
+                            px={"0.5rem"}
+                            py={"0.25rem"}
+                            alignItems={"center"}
+                            mb={"1em"}
+                          >
+                            <Flex
+                              alignItems={"center"}
+                              px={"0.5rem"}
+                              py={"0.25rem"}
+                              bg={"#E4E7EB"}
+                              borderRadius={"0.375rem"}
+                              mr={"10px"}
+                            >
+                              <GrMoney fontSize={"12px"} />
+                              <Text ml={"8px"} fontWeight={500}>
+                                Price
+                              </Text>
+                            </Flex>
+                            <Text fontWeight={600} textTransform={"capitalize"}>
+                              {"40"}{" "}
+                              FIL
+                            </Text>
+                          </Flex>
+
+                          <Flex
+                            borderWidth={"2px"}
+                            borderColor={"rgb(10 10 10/1)"}
+                            alignItems={"center"}
+                            borderRadius={"0.3125rem"}
+                            bg={"rgb(198 201 246)"}
+                            py={"0.25rem"}
+                            px={"0.75rem"}
+                            w={"max-content"}
+                            mt={"1.2rem"}
+                          >
+                            <Box
+                              borderRadius={"50%"}
+                              borderWidth={"1.5px"}
+                              borderColor={"rgb(10 10 10/1)"}
+                              overflow={"hidden"}
+                            >
+                              <Blockies
+                                seed={"0X457"}
+                                color="#dfe"
+                                bgcolor="#aaa"
+                                default="-1"
+                                size={10}
+                                scale={2}
+                              />
+                            </Box>
+                            <Text
+                              ml={"10px"}
+                              fontSize={"0.75rem"}
+                              lineHeight={"1rem"}
+                              fontWeight={600}
+                            >
+                              0xhu456uw....tr1be45q
+                              
+                            </Text>
+                          </Flex>
+
+                          <Progress
+                            my={"1.7rem"}
+                            size="xs"
+                            hasStripe
+                            value={
+                             "100"
+                            }
+                            borderRadius={"20px"}
+                            colorScheme={"purple"}
+                          />
+
+                          <Flex
+                            alignItems={"center"}
+                            justifyContent={"space-around"}
+                            py={"0.5rem"}
+                          >
+                            <Box>
+                              <Text fontSize={"15px"} fontWeight={600}>
+                                Fund Raised
+                              </Text>
+                              <Flex mt={"5px"} alignItems={"center"}>
+                                <Text
+                                  fontWeight={500}
+                                  mr={"5px"}
+                                  fontSize={"17px"}
+                                >
+                                  3100
+                                </Text>
+                                <Image w="20px" src={"/assets/FIL.svg"} />
+                              </Flex>
+                            </Box>
+                            <Box>
+                              <Text fontSize={"15px"} fontWeight={600}>
+                                Fund Goal
+                              </Text>
+                              <Flex mt={"5px"} alignItems={"center"}>
+                                <Text
+                                  fontWeight={500}
+                                  mr={"5px"}
+                                  fontSize={"17px"}
+                                >
+                                 3100
+                                </Text>
+                                <Image w="20px" src={"/assets/FIL.svg"} />
+                              </Flex>
+                            </Box>
+                          </Flex>
+                        </Box>
+
+                        <Box>
+                          <Flex
+                            justifyContent={"space-between"}
+                            alignItems={"center"}
+                            borderColor={"rgb(10 10 10/1)"}
+                            borderTopWidth={"2px"}
+                            py={"1rem"}
+                            px={"2rem"}
+                            bg={"rgb(183 234 213)"}
+                            
+                            
+                          >
+                            <Flex alignItems={"center"}>
+                              {" "}
+                              <HiOutlineCash />
+                              <Text ml={"5px"} fontWeight={600}>
+                                {"FUNDED"}
+                              </Text>
+                            </Flex>
+
+                            {/* <FiArrowUpRight fontSize={"20px"} /> */}
+                          </Flex>
+                        </Box>
+                      </Box>
+                      
+                    </GridItem>
+
+
+                    </Grid>
+
+                    
             </>
           )}
         </Box>
