@@ -24,3 +24,16 @@ a {
 .h-shadow-blue {
   filter: drop-shadow(rgba(0, 112, 243, 0.4) 0px 5px 3px) !important;
 }
+
+
+.rotate {
+  animation: spin 12s linear infinite;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
