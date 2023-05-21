@@ -22,7 +22,7 @@ import { useRouter } from "next/router";
 
 import { useContractRead, useProvider } from "wagmi";
 import { datasetFactoryAddress } from "../../../utils/contractAddress";
-import datasetsContractFactoryAbi from "../../../contracts/ABI/DatasetFactory.json";
+import datasetsContractFactoryAbi from "../../../contracts/ABI/datasetContract.json";
 import { getDatasetContract } from "../../../utils/datasetContract";
 
 function Datasets() {

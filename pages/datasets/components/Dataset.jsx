@@ -33,7 +33,7 @@ import {
 import { useContractReads } from "wagmi";
 import { datasetFactoryAddress } from "../../../utils/contractAddress";
 import datasetContractFactoryAbi from "../../../contracts/ABI/DatasetFactory.json";
-import datasetContractAbi from "../../../contracts/ABI/DatasetContract.json";
+import datasetContractAbi from "../../../contracts/ABI/datasetContract.json";
 import { getDatasetContract } from "../../../utils/datasetContract";
 
 function Dataset() {
