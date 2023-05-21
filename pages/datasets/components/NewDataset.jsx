@@ -196,7 +196,7 @@ function NewDataset() {
               color={"blackAlpha.700 !important"}
               className="ant-upload-text"
             >
-              Click or drag cover image to this area to upload
+              Click or drag files to this area to upload
             </Text>
           </Dragger>
         </Box>
@@ -221,12 +221,12 @@ function NewDataset() {
           </Dragger>
         </Box>
 
-        <Box>
+        {/* <Box>
           <Module
             setModuleSave={setModuleSave}
             setDatasetModuleList={setDatasetModuleList}
           />{" "}
-        </Box>
+        </Box> */}
 
         <Button
           borderWidth={"2px"}
