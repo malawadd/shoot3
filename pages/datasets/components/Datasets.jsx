@@ -22,7 +22,7 @@ import { useRouter } from "next/router";
 
 import { useContractRead, useProvider } from "wagmi";
 import { datasetFactoryAddress } from "../../../utils/contractAddress";
-import datasetContractFactoryAbi from "../../../contracts/ABI/DatasetFactory.json";
+import datasetsContractFactoryAbi from "../../../contracts/ABI/DatasetFactory.json";
 import { getDatasetContract } from "../../../utils/datasetContract";
 
 function Datasets() {
@@ -44,7 +44,7 @@ function Datasets() {
     isFetching,
   } = useContractRead({
     addressOrName: datasetFactoryAddress,
-    contractInterface: datasetContractFactoryAbi,
+    contractInterface: datasetsContractFactoryAbi,
     functionName: "getDeployedDatasets",
     watch: true,
   });
@@ -396,6 +396,7 @@ function Datasets() {
                                   size={10}
                                   scale={2}
                                 />
+                                
                               </Box>
                               <Text
                                 ml={"10px"}

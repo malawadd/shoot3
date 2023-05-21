@@ -1,5 +1,5 @@
-import datasetContractAbi from "../contracts/ABI/DatasetContract.json";
-import datasetFactoryContractAbi from "../contracts/ABI/DatasetFactory.json";
+import datasetContractAbi from "./datasetContract.json";
+import datasetFactoryContractAbi from "./DatasetFactory.json";
 import { ethers } from "ethers";
 
 export const getDatasetContract = (datasetAddress, signerOrProvider) => {
