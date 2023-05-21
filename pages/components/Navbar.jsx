@@ -60,6 +60,20 @@ function Navbar() {
                   funds
                 </Text>
               </Link>
+
+              <Link href="/datasets" _hover={{ textDecoration: "none" }}>
+                <Text
+                  fontSize={"1.125rem"}
+                  color={"#0a0a0a"}
+                  lineHeight={"1.625rem"}
+                  mx={"1em"}
+                  transition="color 0.2s ease"
+                  _hover={{ color: "gray", transition: "color 0.2s ease" }}
+                  fontWeight={router.asPath === "/datasets" ? 600 : 400}
+                >
+                  datasets
+                </Text>
+              </Link>
               
             </Flex>
           )}
