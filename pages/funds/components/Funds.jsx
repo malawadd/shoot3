@@ -29,7 +29,7 @@ import { fundsAddress } from "../../../utils/contractAddress";
 import fundContractAbi from "../../../contracts/ABI/Funds.json";
 import { ethers } from "ethers";
 
-function Courses() {
+function Datasets() {
   const [length, setLength] = useState(0);
   const { setLoading } = useLoadingContext();
   const { data: signer } = useSigner();
@@ -1071,4 +1071,4 @@ function Courses() {
 }
 // export const fundsAddress = "0x8837757bF4733aA1CF3C50cD601F50617F665FdA";
 
-export default Courses;
+export default Datasets;

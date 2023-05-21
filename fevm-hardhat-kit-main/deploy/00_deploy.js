@@ -53,4 +53,10 @@ module.exports = async ({ deployments }) => {
         args: [],
         log: true,
     });
+
+    const DatasetFactory = await deploy("DatasetFactory", {
+        from: wallet.address,
+        args: [],
+        log: true,
+    });
 }

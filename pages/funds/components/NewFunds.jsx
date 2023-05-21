@@ -19,7 +19,7 @@ import {
 } from "@chakra-ui/react";
 import React, { useEffect, useState } from "react";
 import { useLoadingContext } from "../../../context/loading";
-// import Backward from "../../courses/components/Backward";
+// import Backward from "../../datasets/components/Backward";
 import { useRouter } from "next/router";
 
 import { useContractWrite, useWaitForTransaction, useAccount } from "wagmi";
